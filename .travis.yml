@@ -13,7 +13,7 @@ script:
 
 after_success:
   - docker build -t dlwp142/docker-frontend ./frontend
-  - docker bulld -t dlwp142/docker-backend ./backend
+  - docker build -t dlwp142/docker-backend ./backend
   - docker build -t dlwp142/docker-nginx ./nginx
 
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
