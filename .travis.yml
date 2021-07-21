@@ -16,7 +16,7 @@ after_success:
   - docker bulld -t dlwp142/docker-backend ./backend
   - docker build -t dlwp142/docker-nginx ./nginx
 
-  - echo "$DOCKER_HUB_PASSWORD" | docker login -t "$DOCKER_HUB_ID" --password-stdin
+  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
   - docker push dlwp142/docker-frontend
   - docker push dlwp142/docker-backend
